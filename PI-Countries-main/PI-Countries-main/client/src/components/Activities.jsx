@@ -206,12 +206,12 @@ const handleCheck = (event) => {
         <button className={styles.button} type='submit'>Add</button> </fieldset>
         </form>  
           
-        </div >     
+        </div  >     
           {input.countries.map(el => 
             <div className={styles.del}>
               <p>{el}</p>
           
-              <button className={styles.x} onClick={(() => handleDelete(el))} >delete</button>
+              <button className={styles.x} onClick={(() => handleDelete(el))} >X</button>
               </div> )}
       </div>
     );
