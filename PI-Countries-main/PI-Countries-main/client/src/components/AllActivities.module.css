@@ -1,0 +1,24 @@
+.card {
+   
+    box-shadow: 2px 2px aliceblue;
+     width: 
+     300px; 
+      padding-right: 30px;
+     border-radius: 5px;
+     background:linear-gradient(rgba(5, 7, 12,  0.40), rgba(5, 7, 12,  0.70));
+     display:grid;
+     color: aliceblue;
+}
+
+h3
+ {
+    text-shadow: 2px 2px black;
+}
+.grid {
+    display: grid;
+    justify-items: center;
+    gap: 0.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    padding-block: 2rem;
+
+}

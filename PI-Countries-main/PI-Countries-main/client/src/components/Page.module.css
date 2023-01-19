@@ -1,0 +1,24 @@
+.li{
+background:linear-gradient(rgba(5, 7, 12, 0.40), rgba(5, 7, 12, 0.75));
+border-radius: 5px;
+width: 20px;
+cursor:pointer;
+color: aliceblue;
+box-shadow: 2px 2px;
+
+}
+
+.nav {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+   
+   
+}
+.ul {
+    display: flex; 
+    gap: 0.5rem;
+    
+   
+
+}

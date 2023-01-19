@@ -1,0 +1,29 @@
+.text {
+    font-size:80px;
+    color: rgb(5, 7, 12, );
+    text-align: center;
+    text-decoration: underline rgb(5, 7, 12);
+    text-shadow:2px 1px antiquewhite;
+}
+
+.button {
+    border-radius: 5px;
+    height: 100px;
+    width: 200px;
+    background:linear-gradient(rgba(5, 7, 12, 0.4), rgba(5, 7, 12,  0.70)) ;
+    color: aliceblue;
+    font-size: larger;
+    margin-left: 550px;
+    box-shadow: 2px 2px antiquewhite;
+    cursor: pointer;
+    text-shadow: 2px 2px black;
+    
+    
+}
+.landing {
+    display: inline-block;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+   
+}

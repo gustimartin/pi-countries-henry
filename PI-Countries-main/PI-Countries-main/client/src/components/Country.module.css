@@ -1,0 +1,54 @@
+.countryCard {
+    background:linear-gradient(rgba(5, 7, 12, 0.40), rgba(5, 7, 12, 0.6));
+    border-radius: 5px ;
+    width:160px;
+    height: 300px;  
+    list-style: none;  
+    color: aliceblue;
+    box-shadow: 3px 2px aliceblue;
+}
+.grid {
+    display: grid;
+    justify-items: center;
+    gap: 0.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    padding-block: 2rem;
+   
+
+}
+
+ .contained {
+    height:  min-content;
+    width: min-content;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+  
+   
+  
+ 
+} 
+
+ .countryImage {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    
+   
+   
+}
+
+ .countryText {
+    font-size: 1.3rem;
+    display: inline-block;
+    justify-items:center;
+    justify-content: center; 
+    align-items: center;
+    color: aliceblue;
+}
+
+

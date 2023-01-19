@@ -1,0 +1,49 @@
+//                       _oo0oo_
+//                      o8888888o
+//                      88" . "88
+//                      (| -_- |)
+//                      0\  =  /0
+//                    ___/`---'\___
+//                  .' \\|     |// '.
+//                 / \\|||  :  |||// \
+//                / _||||| -:- |||||- \
+//               |   | \\\  -  /// |   |
+//               | \_|  ''\---/''  |_/ |
+//               \  .-\__  '-'  ___/-. /
+//             ___'. .'  /--.--\  `. .'___
+//          ."" '<  `.___\_<|>_/___.' >' "".
+//         | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+//         \  \ `_.   \_ __\ /__ _/   .-` /  /
+//     =====`-.____`.___ \_____/___.-`___.-'=====
+//                       `=---='
+//     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+const server = require('./src/app.js');
+const { conn, Country } = require('./src/db.js');
+const axios = require('axios')
+
+
+const charge = async () => {
+await axios.get('https://restcountries.com/v3/all').then((response) => {
+  let result = response.data.map((info) => {
+    const obj = {
+  id: info.cca3,
+  name: info.name.common,
+  image:info.flags[0],
+  continent:info.region,
+  capital:info.capital ? info.capital[0] :'none',
+  subregion: info.subregion,
+  population:info.population
+ }
+ return obj;
+ });
+Country.bulkCreate(result)
+});
+
+}
+// Syncing all the models at once.
+conn.sync({ force: true }).then( async () => {
+  await charge()
+  server.listen(3001,() => {
+    console.log('%s listening at 3001'); // eslint-disable-line no-console
+  });
+});
