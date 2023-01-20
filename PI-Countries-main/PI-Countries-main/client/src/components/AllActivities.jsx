@@ -12,7 +12,7 @@ function AllActivities(props) {
 
     useEffect(()=> {
         dispatch(getActivities() 
-        )},[dispatch])
+        )},[dispatch, allActivities])
     return (
         <div>
              <NavBar/>

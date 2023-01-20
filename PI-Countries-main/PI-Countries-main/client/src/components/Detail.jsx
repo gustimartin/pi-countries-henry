@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { getCountriesDetail } from '../redux/actions';
 import { useEffect } from 'react';
@@ -10,9 +10,14 @@ function Detail(props) {
 
   const dispatch = useDispatch()
   const detail = useSelector (state =>state.detail)
+
  
   useEffect(()=> {
-   dispatch(getCountriesDetail(props.match.params.id))
+    dispatch(getCountriesDetail(props.match.params.id))
+  
+   return () => {
+    dispatch(getCountriesDetail())
+    }
   },[dispatch, props.match.params.id])
  
   const act= detail.activities

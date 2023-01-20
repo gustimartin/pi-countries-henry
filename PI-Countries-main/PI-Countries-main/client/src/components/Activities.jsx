@@ -39,6 +39,7 @@ if(!Object.keys(errors).length) {
     duration:'',
     countries:[]
   })
+
 history.push('/activities/all')
 }else{
   alert('more information needed')
@@ -97,6 +98,7 @@ const handleCheck = (event) => {
         countries: input.countries.filter(co => co !== el)
       })
     } 
+   
     
 
     return ( 
@@ -104,7 +106,7 @@ const handleCheck = (event) => {
         <NavBar />
         
         <div >
-          <form  onSubmit={(event) =>handleSubmit(event)}>
+          <form   onSubmit={(event) =>handleSubmit(event)}>
             <fieldset className={styles.container}>  
                <legend> 
                 <h3 className={styles.activity}> Add Activity</h3>

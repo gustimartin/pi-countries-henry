@@ -52,7 +52,7 @@ const rootReducer = (state = initialState, action) => {
  
                 }
         case FILTER_BY_POPULATION:
-            let sortPopulation = [...state.countries] 
+            let sortPopulation = [...state.countries]  
             sortPopulation.sort(function (a, b) {
                 if (Number(a.population) >Number( b.population)) {
                     return action.payload === 'lowest' ? 1 : -1

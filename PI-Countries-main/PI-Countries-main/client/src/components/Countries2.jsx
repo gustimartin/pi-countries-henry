@@ -19,12 +19,15 @@ const error = useSelector(state=>state.error)
 
    const page = (pageNum) => {
       setCurrentPage(pageNum)
+      
+      
      }
      
  
 
 useEffect(()=> {
  dispatch(getCountries()
+ 
  )},[dispatch])
 
 
