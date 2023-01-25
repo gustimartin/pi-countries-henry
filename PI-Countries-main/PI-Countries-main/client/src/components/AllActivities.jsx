@@ -5,14 +5,14 @@ import { useEffect } from 'react';
 import NavBar from './NavBar';
 import styles from './AllActivities.module.css'
 
-function AllActivities(props) {
+function AllActivities() {
 
     const dispatch = useDispatch()
     const allActivities = useSelector(state => state.allActivities)
 
     useEffect(()=> {
-        dispatch(getActivities() 
-        )},[dispatch, allActivities])
+        dispatch(getActivities(allActivities) 
+        )},[dispatch, ])
     return (
         <div>
              <NavBar/>

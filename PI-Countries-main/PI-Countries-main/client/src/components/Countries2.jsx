@@ -30,6 +30,12 @@ useEffect(()=> {
  
  )},[dispatch])
 
+ useEffect(()=> {
+   if(countries.length < 8){
+      page(1)
+   }
+   
+},[countries])
 
 
 

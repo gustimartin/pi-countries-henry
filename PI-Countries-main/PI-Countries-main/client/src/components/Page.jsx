@@ -6,8 +6,8 @@ function Page({countriePerPage, countries, page}) {
     
    const pageNum = []
    
-   for( let i=0; i<= Math.ceil(countries/countriePerPage);i++){
-    pageNum.push(i+1)
+   for( let i=1; i<= Math.ceil(countries/countriePerPage);i++){
+    pageNum.push(i)
    }
 
 

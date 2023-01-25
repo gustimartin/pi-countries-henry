@@ -43,13 +43,18 @@ function Detail(props) {
              {!act?.length ?  <Link to='/activities'> <button>Create activity</button>       
                </Link> : act.map((el) => {
                return (
+                <div>
                  <ul>
-                 <li >
-                  activity: {el.name},
-                 dificulty: {el.dificulty},
-                 season: {el.season},
-                 duration: {el.duration}</li>     
-           </ul>
+                   <li >
+                     activity: {el.name},
+                     dificulty: {el.dificulty},
+                     season: {el.season},
+                     duration: {el.duration}
+                    </li>    
+               </ul>
+
+                 <Link to="/activities"><button>agregar activity</button> </Link>
+                 </div>
              )})  
             } </fieldset>
              {console.log(detail.activities)}
